@@ -1,0 +1,19 @@
+<app-topo></app-topo>
+<div *ngIf="jogoEmAndamento; else fimDeJogo">
+    <app-painel (encerrarJogo)="encerrarJogo($event)"></app-painel>
+</div>
+<ng-template #fimDeJogo>
+    <div class="po-wrapper">
+        <po-page-default style="margin-left: 0px;">
+            <po-widget>
+                <div class="po-row">
+                    <img src="/assets/done.png" style="max-width: 100%; height: 300px;" />
+                </div>
+                <div class="po-row">
+                    <po-button p-label="Reiniciar" (p-click)="reiniciarJogo()" p-type="primary">
+                    </po-button>
+                </div>
+            </po-widget>
+        </po-page-default>
+    </div>
+</ng-template>

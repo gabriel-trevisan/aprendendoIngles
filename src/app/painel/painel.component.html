@@ -1,0 +1,46 @@
+<div class="po-wrapper">
+    <po-page-default style="margin-left: 0px;">
+        <po-widget>
+            <div class="po-row">
+                <div class="po-sm-6">
+                    <font class="po-font-text-large-bold">Progresso</font>
+                </div>
+                <div class="po-sm-6">
+                    <app-tentativas [tentativas]="tentativas" style="float: right;" class="tentativas-container">
+                    </app-tentativas>
+                </div>
+                <div class="po-sm-12">
+                    <app-progresso [progresso]="progresso"></app-progresso>
+                    <po-divider></po-divider>
+                </div>
+            </div>
+            <div class="po-row">
+                <div class="po-sm-6">
+                    <span class="po-icon po-icon-sms" style="margin: 3px 5px 0px 0px;"></span>
+                    <font class="po-font-text-large">{{ instrucao }}</font>
+                </div>
+            </div>
+            <div class="po-row">
+                <div class="po-sm-12" style="margin-top: 10px;">
+                    <font class="po-font-text-large-bold">
+                        {{ rodadaFrase.fraseEng }}
+                    </font>
+                </div>
+            </div>
+            <div class="po-row">
+                <div class="po-sm-12">
+                    <po-textarea name="textarea" (p-change-model)="atualizaResposta($event)" p-auto-focus="true"
+                        [(ngModel)]="resposta">
+                    </po-textarea>
+                </div>
+            </div>
+            <div class="po-row">
+                <div class="po-sm-12">
+                    <po-button p-label="Verificar" (p-click)="verificarResposta()" class="po-button-end"
+                        p-type="primary">
+                    </po-button>
+                </div>
+            </div>
+        </po-widget>
+    </po-page-default>
+</div>

@@ -1,0 +1,13 @@
+body{
+    background-color: #eeeeee;
+}
+.po-wrapper{
+    margin-top: unset;
+    padding-top: 56px;
+    margin-left: 0px;
+}
+
+.po-row{
+    align-items: center;
+    justify-content: center;
+}

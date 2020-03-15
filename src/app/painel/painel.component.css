@@ -1,0 +1,14 @@
+.po-wrapper{
+    margin-top: unset;
+    padding-top: 56px;
+    margin-left: 0px;
+}
+.po-wrapper po-page-default po-page .po-page{
+    margin-left: 0px;
+    width: 0;
+}
+.po-button-end{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
